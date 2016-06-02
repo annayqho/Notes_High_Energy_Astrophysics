@@ -29,6 +29,8 @@
 
 \item \textbf{Calculate from first principles the density at which degenerate electrons become relativistic. What temperature would be required to lift the degeneracy?} \\
 
+\textcolor{blue}{Modifications by Bhawna in blue. (Later tonight 06/01)}
+
 Degenerate electrons become relativistic when 
 
 \begin{equation}
@@ -50,7 +52,7 @@ n_e = \frac{8 \pi}{3} \left( \frac{m_e c}{h} \right)^3
 The condition for degeneracy is $kT \ll \epsilon_F$, so to lift the degeneracy you would need $kT = \epsilon_F$. 
 
 \begin{equation}
-T = \frac{\epsilon_F}{k} = \frac{1}{k} \left( \sqrt{m_e c^2 + p_F^2 c^2} - m_e c^2 \right)
+T = \frac{\epsilon_F}{k} = \frac{1}{k} \left( \sqrt{m_e^2 c^4 + p_F^2 c^2} - m_e c^2 \right)
 \end{equation}
 
 We should probably also know the various limits of this equation. \newline
@@ -823,11 +825,23 @@ In radio jets, you get Lorentz factors of around 10, and in gamma ray bursts you
 
 \item \textbf{Discuss the observational consequences of Doppler boosting in radio jets and in gamma-ray bursts.}
 
-Doppler boosting: the radiation emitted by a blob of jet matter is relativistically enhanced as it approaches the observer. The consequence is that the flux from the forward part of the jet is boosted by a factor of 1000 (even for a mildly relativistic jet) while the flux from the backward part of the jet is diminished by a factor of 1000. So, often, observations only show one side of the jet. However, since the radiation from jets is primarily synchrotron radiation, which usually follows a power law $I_\nu^{\mathrm{em}} \propto \nu^{-\alpha}$, the spectrum remains a power law in the observer's frame. Every frequency is shifted by the same factor and the slope remains unchanged. 
+Doppler boosting: the radiation emitted by a blob of jet matter is relativistically enhanced as it approaches the observer. \textcolor{red}{\begin{equation}
+\frac{I_{\nu}^\textrm{obs}}{(\nu^\textrm{obs})^3}=\frac{I_\nu^\textrm{em}}{(\nu^\textrm{em})^3}, 
+\end{equation}
+Because $\nu^\textrm{obs}=D\nu^\textrm{em}$, where 
+\begin{equation}
+D=\frac{\sqrt{1-\beta^2}}{1-\beta\cos\theta},
+\end{equation}
+Therefore, $I_{\nu}^\textrm{obs}(D\nu)=D^3I_{\nu}^\textrm{em}(\nu)$.
+} The consequence is that the flux from the forward part of the jet is boosted by a factor of 1000 (even for a mildly relativistic jet) while the flux from the backward part of the jet is diminished by a factor of 1000. So, often, observations only show one side of the jet. However, since the radiation from jets is primarily synchrotron radiation, which usually follows a power law $I_\nu^{\mathrm{em}} \propto \nu^{-\alpha}$, the spectrum remains a power law in the observer's frame. \textcolor{red}{$I_{\nu}^\textrm{obs}=D^{3+\alpha}I_{\nu}^\textrm{em}$.}Every frequency is shifted by the same factor and the slope remains unchanged. 
+
+\textcolor{red}{Note that for linear objects (jets), it is $I_\nu/\nu^2$ that remains constant. }
 
 \item \textbf{What is the proposed connection between LIGO and short gamma-ray bursts?}
 
-0.4 after LIGO detected the GW event, there was a supposed gamma-ray burst detection by Fermi. However, then you'd have some missing matter. Avi Loeb's claim is that one star became two collapsing cores because it was rotating very quickly, and maybe there was a 0.4 second delay because that's the time it took the GRB to cross the star. 
+\textcolor{red}{The central engine is very likely to emit gravitational waves, as the energy reservoir should be much larger than the observed photon energy. Compact binary mergers are proposed to possible sources of short GRBs. The region above the poles of newly formed object is likely the place to launch fireballs because they are close to the source of energy. Neutrino annihilation can produce electron-positron pairs, and if collimated properly, can produce enough energy. }
+
+0.4s after LIGO detected the GW event, there was a supposed gamma-ray burst detection by Fermi. However, then you'd have some missing matter. Avi Loeb's claim is that one star became two collapsing cores because it was rotating very quickly, and maybe there was a 0.4 second delay because that's the time it took the GRB to cross the star. 
 
 \end{enumerate}
 
