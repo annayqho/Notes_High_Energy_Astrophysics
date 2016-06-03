@@ -29,7 +29,7 @@
 
 \item \textbf{Calculate from first principles the density at which degenerate electrons become relativistic. What temperature would be required to lift the degeneracy?} \\
 
-\textcolor{blue}{Modifications by Bhawna in blue. (Later tonight 06/01)}
+\textcolor{blue}{Additions by Bhawna in blue.}
 
 Degenerate electrons become relativistic when 
 
@@ -75,11 +75,11 @@ Putting these two together, we get
 
 $$ R \sim \frac{\hslash}{m_e} \frac{1}{G m_b^{5/3}} M^{-1/3} $$
 
-For a high mass WD with relativistic electrons, the equation of state is, instead, 
+For a high mass WD with relativistic electrons \textcolor{blue}{(the degeneracy pressure forces electrons to reach energies highly exceeding their rest mass energies)}, the equation of state is, instead, 
 
 $$ P \propto n_e^{4/3} $$
 
-As a result, $R$ is not dependent of $M$ at all. In fact, $M$ simply takes on one value: the fundamental mass limit called the \textbf{Chandrasekhar limit}, $M_{Ch}$. Qualitatively, here's how you can understand the origin of this limit: as you crank up the central density so that $\rho_c \rightarrow \infty$, the electrons become more and more relativistic throughout the star, and the mass asymptotically approaches the value $M_{ch}$ as $R \rightarrow 0$. This mass limit represents the maximum possible mass of a white dwarf, and its dependence on composition is contained entirely in $\mu_e$ for a cold, perfect gas. 
+As a result, $R$ is not dependent on $M$ at all. In fact, $M$ simply takes on one value: the fundamental mass limit called the \textbf{Chandrasekhar limit}, $M_{Ch}$. Qualitatively, here's how you can understand the origin of this limit: as you crank up the central density so that $\rho_c \rightarrow \infty$, the electrons become more and more relativistic throughout the star, and the mass asymptotically approaches the value $M_{ch}$ as $R \rightarrow 0$. This mass limit represents the maximum possible mass of a white dwarf, and its dependence on composition is contained entirely in $\mu_e$ for a cold, perfect gas. 
 
 \begin{equation}
 M \rightarrow 1.457 \left( \frac{2}{\mu_e} \right)^2 M_\odot 
@@ -101,15 +101,17 @@ $$ E_F \propto \hslash n^{1/3} c \propto \frac{\hslash c N^{1/3}}{R} $$
 
 Each fermion has a gravitational energy
 
-$$ E_G \propto - \frac{G M m_B}{R} = \frac{G N m_B^2}{R} $$
+$$ E_G \propto - \frac{G M m_B}{R} = \frac{G N\textcolor{blue}{_B} m_B^2}{R} $$
+
+\textcolor{blue}{where $m_B$ and $N_B$ are mass of a single baryon and total number of baryons, respectively. Also, $N_B$ $\sim$ 2$N$}
 
 So, the total energy is 
 
-$$ E = \frac{\hslash c N^{1/3}}{R} - \frac{G N m_B^2}{R} $$
+$$ E = \frac{\hslash c N^{1/3}}{R} - \frac{\textcolor{blue}{2}G N m_B^2}{R} $$
 
 If $N$ is very large, $ E < 0 $, and you can make $E$ more and more negative by decreasing $R$, so there's no stable equilibrium. So, to achieve equilibrium you just set $ E = 0 $. Thus,
 
-$$ N_{max} \propto \left( \frac{\hslash c}{G m_B^2} \right)^{3/2} $$
+$$ N_{max} \propto \left( \frac{\hslash c}{\textcolor{blue}{2}G m_B^2} \right)^{3/2} $$
 
 This gives,
 
@@ -117,11 +119,11 @@ $$ M_{\mathrm{max}} \propto N_{\mathrm{max}} \, m_B \propto 1.5 M_\odot $$
 
 \item \textbf{What actually sets the maximum mass of a white dwarf, and how does this depend on composition?}
 
-In HW1, we mentioned that the maximum mass can be set by the pycnonuclear reactions which can fuse WDs in $\ll 10^5 $ yr when the central densities are higher than $10^6, 10^9,$ and $10^{10} \ \rm g \ cm^{-3}$ for H, He, and C WDs respectively. Pycnonuclear reactions are nuclear fusions that happen to nuclei confined in lattice structures at high density.
+In HW1, we mentioned that the maximum mass can be set by the pycnonuclear reactions which can fuse WDs in $\ll 10^5 $ yr when the central densities are higher than $10^6, 10^9,$ and $10^{10} \ \rm g \ cm^{-3}$ for H, He, and C WDs respectively. Pycnonuclear reactions are nuclear fusions that happen to nuclei confined in lattice structures at high density \textcolor{blue}{and very low temperatures ($T \sim 0 K$). Unlike thermonuclear reactions, the rates of these reactions are not sensitive to temperature, but grow exponentially with increasing densities. The threshold densities for such reactions to happen is, as we saw, different for different WD compositions}.
 
 \item \textbf{Outline the principles of calculating white dwarf cooling, and the relation between luminosity, age and mass of white dwarfs.}
 
-You can think of a WD like a degenerate isothermal metal ball, with heat carried by electron conduction, with a non-degenerate blanket that has a temperature gradient. This ``blanket'' is basically nondegenerate surface layers that are in ``radiative equilibrium:'' matter is in local thermodynamic equilibrium with an energy flux carried outward by photon diffusion (heat transport by radiation). 
+You can think of a WD like a degenerate isothermal metal ball, with heat carried by electron conduction \textcolor{blue}{(this is because the opacities for radiative transport are low in lack of vacant energy levels for electrons to jump to by absorption of photons)}, with a non-degenerate blanket that has a temperature gradient. This ``blanket'' is basically nondegenerate surface layers that are in ``radiative equilibrium'': matter is in local thermodynamic equilibrium with an energy flux carried outward by photon diffusion (heat transport by radiation). 
 
 Let's begin with the Eulerian form of the temperature equation of stellar structure, which you can define by considering radiative transport as a diffusion process. 
 
@@ -198,11 +200,14 @@ You can use these white dwarf cooling sequences to age-date globular clusters.
 
 We have neglected one important effect in particular: crystallization of the ion lattice. At low temperatures (and low luminosity) the lattice vibrations of the ions are more important than the free thermal motion. So, you get more rapid cooling. 
 In a white dwarf, the electrons have most of the energy, but most of the heat is in the ions. 
-If you crank up the density, the ions become degenerate and you get a neutron star. If you crank up the temperature, you get crystallization, which means that the heat content drops. The temperature at which this happens increases steeply with mass. 
+If you crank up the density, the ions become degenerate and you get a neutron star. If you crank up the temperature, you get crystallization, which means that the heat content drops. The temperature at which this happens increases steeply with mass.
+
+\textcolor{blue}{Writing my impression of the answer:\\ The low luminosity end of the WD luminosity function has a steep drop governed by the time that has passed since the WD started cooling. The longest that the WDs could have been cooling would be the age of the galaxy in which they are, or more liberally, the age of the universe at the most. Since a more massive WD has smaller radius (hence lower surface area) than its less massive counterpart of the same age, it cools down slower and would exhibit a higher luminosity than the latter.\\
+As the temperature drops, the thermal kinetic energy of heavy element ions such as C and O present in the interiors of WDs drops enough that they can now crystallize into lattice structures maintained by Couloumb repulsion. By the virtue of additional luminosity from the release of crystal latent heat, this process effectively slows down the cooling rate until the WD fully crystallizes.}
 
 \item \textbf{Discuss the atmospheric composition of white dwarfs, and the physical reasons for these.}
 
-White dwarfs are classified into two distinct families according to the main constituent of their surface. 85\% of white dwarfs are \textbf{DA white dwarfs}: the surface composition consists almost entirely of H with at most traces of other elements. The remaining 15\% or so are \textbf{non-DA white dwarfs}: they are H-deficient with He-rich atmospheres. They are thought to be H-deficient because their progenitor underwent some kind of violent episode, like a thermal flash or a merger. They can be broken further into subclasses: DO have singly ionized He, DB have strong neutral He lines, and DC, DQ, and DZ have trace carbon and metals. There's also a new type, called \textbf{hot DQ white dwarfs} that have carbon-dominated atmospheres. They are thought to be the result of convective mixing. 
+White dwarfs are classified into two distinct families according to the main constituent of their surface. 85\% of white dwarfs are \textbf{DA white dwarfs}: the surface composition consists almost entirely of H with at most traces of other elements. The remaining 15\% or so are \textbf{non-DA white dwarfs}: they are H-deficient with He-rich atmospheres. They are thought to be H-deficient because their progenitor underwent some kind of violent episode, like a thermal flash or a \textcolor{blue}{recent} merger. The ratio of non-DA/DA WDs decreases with a decrease in surface temperature due to the gravitational setting of heavy elements, which generally takes place quite fast. They can be broken further into subclasses: DO have singly ionized He, DB have strong neutral He lines \textcolor{blue}{(with lower $T_\mathrm{eff}$ than DOs to facilitate recombination of He$^{+}$)}, and DC, DQ, and DZ have \textcolor{blue}{featureless continuum spectra,} carbon \textcolor{blue}{lines (due to convective mixing)} and metal \textcolor{blue}{lines (due to accretion) respectively}. There's also a new type, called \textbf{hot DQ white dwarfs} that have carbon-dominated atmospheres. They are thought to be the result of convective mixing.
 
 \item \textbf{What are novae? What determines whether or not there is a thermonuclear runaway near the surface of an accreting white dwarf? Is the burning a detonation (explosive burning behind
 a shock front)?}
@@ -234,6 +239,8 @@ After three years or so, the nebula expanding shell becomes transparent and you 
 
 You can get \emph{recurrent novae}: very massive, very high accretion rate systems. The time between flashes is on the order of $ t \sim \frac{\Delta M}{\dot{M}} $
 
+\textcolor{blue}{Again, I'll just write my short version here:\\ Novae are manifestations of runaway fusion reactions triggered by the heat of accretion onto the WD from a companion. This phenomenon, also known as `unstable burning', leads to liberation of huge amounts of energy that violently blows away material from the white dwarf's surface and produces an extremely bright burst of light that we call Nova. From what I understand, whether or not thermonuclear runaway would happen is determined by the accretion rate. If the accretion rate is fast enough that the material (mostly H) keeps burning as it accretes on to the WD surface, there would be no unstable burning. So for unstable burning to happen, the accretion rates have to be slow such that the material can pile up on the WD surface without reaching burning temperatures and then burns all at once at a later time. The resulting energy from unstable nuclear burning in this case does not propagate through a shock front, but as a ``flame'' or a deflagration front instead.}
+
 \item \textbf{Explain the phenomenon of accretion-induced collapse of a white dwarf, and the role played by electron capture. What other phenomena might prevent accretion-induced collapse?}
 
 The white dwarf has a carbon-burning shell that's adding mass to the (O, Ne, Mg) core. As you gradually add mass, the following could happen:
@@ -243,6 +250,8 @@ The white dwarf has a carbon-burning shell that's adding mass to the (O, Ne, Mg)
 \item Eventually becomes unstable and collapses
 \item Competition between electron capture, transition to instability. Explosion? Partial explosion (only enough energy to unbind outer layers)? Collapses into a neutron star? An \emph{electron-capture supernova}? Accretion-induced collapse? (The former is a popular theory for how to produce a neutron star with a low kick velocity, and the latter is a popular theory for how to make a young neutron star in a globular cluster). 
 \end{enumerate}
+
+\textcolor{blue}{Heavier elements like magnesium and neon in an ONeMg WD are less susceptible to runaway fusion than carbon and oxygen, and are more likely to undergo the neutronization reactions that remove the electron degeneracy pressure support and causes the star to collapse. Therefore, if the accretion rates are small, an ONeMg WD will continue to gain mass till it reaches the Chandrashekhar limit and then collapse.\\ The role of electron capture reactions in this process is in the removal of electrons, and hence in the reduction of degeneracy pressure support.\\ For starters, runaway fusion of heavy elements before pressure support is taken away can stall the collapse. Speculation - Perhaps also high speed rotation, and heating from neutrinos?}
 
 \item \textbf{Derive degeneracy pressure of free-neutrons and the free neutron analog of the white-dwarf mass-radius relation. How does, or does not, this calculation accurately represent the properties of neutron stars?}
 
